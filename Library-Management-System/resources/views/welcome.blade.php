@@ -44,7 +44,7 @@
             <div class="col-md-3">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h3>120</h3>
+                        <h3>{{ $totalBooks }}</h3>
                         <p class="text-muted mb-0">Total Books</p>
                     </div>
                 </div>

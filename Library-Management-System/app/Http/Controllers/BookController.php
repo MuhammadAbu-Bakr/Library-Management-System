@@ -11,11 +11,14 @@ class BookController extends Controller
 {
     public function index()
     {
+        $totalBooks = Book::count();
         return view('books.index', [
             'books' => Book::with(['author', 'category'])->get(),
             'authors' => Author::all(),
             'categories' => Category::all(),
+            'totalBooks' =>$totalBooks,
         ]);
+        
     }
 
     public function store(Request $request)

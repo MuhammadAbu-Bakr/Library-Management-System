@@ -7,8 +7,12 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\IssueController;
 use App\Http\Controllers\FinanceController;
+use App\Models\Book;
+use App\Models\Author;
+use App\Models\Category;
 Route::get('/', function () {
-    return view('welcome');
+    $totalBooks = Book::count(); 
+    return view('welcome', compact('totalBooks'));
 })->name('welcome');
 Route::resource('books', BookController::class)->only(['index', 'store', 'destroy']);
 Route::resource('authors', AuthorController::class)->only(['store', 'destroy']);
