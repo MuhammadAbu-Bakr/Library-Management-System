@@ -96,7 +96,7 @@
                     <div class="card-body text-center">
                         <h4>Manage Members</h4>
                         <p>Register members and manage memberships.</p>
-                        <a href="{{ route('members.index') }}" class="btn btn-primary">Open</a>
+                        <button class="btn btn-secondary" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <div class="card-body text-center">
                         <h4>Issue Books</h4>
                         <p>Issue, return, and track overdue books.</p>
-                        <a href="{{ route('issue.index') }}" class="btn btn-primary">Open</a>
+                        <button class="btn btn-secondary" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
