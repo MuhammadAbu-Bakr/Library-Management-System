@@ -13,16 +13,16 @@
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">LMS</a>
+            <a class="navbar-brand" href="{{ route('welcome') }}">LMS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Books</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Members</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#">Issue</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{{ route('welcome') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('books.index') }}">Books</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('members.index') }}">Members</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ route('members.index') }}">Issue</a></li>
                 </ul>
             </div>
         </div>
@@ -86,7 +86,7 @@
                     <div class="card-body text-center">
                         <h4>Manage Books</h4>
                         <p>Add, update, and categorize library books.</p>
-                        <a href="#" class="btn btn-primary">Open</a>
+                        <a href="{{ route('books.index') }}" class="btn btn-primary">Open</a>
                     </div>
                 </div>
             </div>
@@ -96,7 +96,7 @@
                     <div class="card-body text-center">
                         <h4>Manage Members</h4>
                         <p>Register members and manage memberships.</p>
-                        <a href="#" class="btn btn-primary">Open</a>
+                        <a href="{{ route('members.index') }}" class="btn btn-primary">Open</a>
                     </div>
                 </div>
             </div>
@@ -106,7 +106,7 @@
                     <div class="card-body text-center">
                         <h4>Inventory</h4>
                         <p>Track book stock and availability.</p>
-                        <a href="#" class="btn btn-primary">Open</a>
+                        <button class="btn btn-secondary" disabled>Coming Soon</button>
                     </div>
                 </div>
             </div>
@@ -116,7 +116,7 @@
                     <div class="card-body text-center">
                         <h4>Issue Books</h4>
                         <p>Issue, return, and track overdue books.</p>
-                        <a href="#" class="btn btn-primary">Open</a>
+                        <a href="{{ route('issue.index') }}" class="btn btn-primary">Open</a>
                     </div>
                 </div>
             </div>
