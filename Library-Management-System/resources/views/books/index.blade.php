@@ -82,7 +82,9 @@
                                         <td>{{ $book->author->name }}</td>
                                         <td>{{ $book->category->name }}</td>
                                         <td class="text-center">
-                                            <form action="{{ route('books.destroy',$book->id) }}" method="POST">
+                                            <a href="{{ route('books.show', $book->id) }}" class="btn btn-sm btn-info">View</a>
+                                            <a href="{{ route('books.edit', $book->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('books.destroy',$book->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Delete this book?')">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-sm btn-danger">Delete</button>
@@ -136,7 +138,9 @@
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $author->name }}</td>
                                         <td class="text-center">
-                                            <form action="{{ route('authors.destroy',$author->id) }}" method="POST">
+                                            <a href="{{ route('authors.show', $author->id) }}" class="btn btn-sm btn-info">View</a>
+                                            <a href="{{ route('authors.edit', $author->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                            <form action="{{ route('authors.destroy',$author->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Delete this author?')">
                                                 @csrf
                                                 @method('DELETE')
                                                 <button class="btn btn-sm btn-danger">Delete</button>
@@ -186,17 +190,19 @@
                             </thead>
                             <tbody>
                                 @forelse($categories as $category)
-                                    <tr>
-                                        <td>{{ $loop->iteration }}</td>
-                                        <td>{{ $category->name }}</td>
-                                        <td class="text-center">
-                                            <form action="{{ route('categories.destroy',$category->id) }}" method="POST">
-                                                @csrf
-                                                @method('DELETE')
-                                                <button class="btn btn-sm btn-danger">Delete</button>
-                                            </form>
-                                        </td>
-                                    </tr>
+                                <tr>
+                                    <td>{{ $loop->iteration }}</td>
+                                    <td>{{ $category->name }}</td>
+                                    <td class="text-center">
+                                        <a href="{{ route('categories.show', $category->id) }}" class="btn btn-sm btn-info">View</a>
+                                        <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-sm btn-warning">Edit</a>
+                                        <form action="{{ route('categories.destroy', $category->id) }}" method="POST" style="display:inline-block;" onsubmit="return confirm('Delete this category?')">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-sm btn-danger">Delete</button>
+                                        </form>
+                                    </td>
+                                </tr>
                                 @empty
                                     <tr>
                                         <td colspan="3" class="text-center text-muted">No records</td>

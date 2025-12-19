@@ -21,3 +21,6 @@ Route::get('/members', [MemberController::class, 'index'])->name('members.index'
 Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/issue', [IssueController::class, 'index'])->name('issue.index');
 Route::get('/finances', [FinanceController::class, 'index'])->name('finances.index');
+Route::resource('books', BookController::class);
+Route::resource('authors', AuthorController::class);
+Route::resource('categories', CategoryController::class);
