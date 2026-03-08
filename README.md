@@ -158,6 +158,8 @@ Interested in Web Development, AI, and ML Engineering
 ## 📷 ScreenShot
 <div align="center">
   <img src="Library-Management-System/assets/icon.png" width="200" height="200" alt="Logo">
+</div>
+<div align="center">
   <img src="Library-Management-System/assets/Main Menu.png" width="200" height="400" alt="Main Menu">
   <img src="Library-Management-System/assets/Mange Books.png" width="200" height="400" alt="Mange Books">
 </div>
