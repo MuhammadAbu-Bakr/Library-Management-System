@@ -170,7 +170,7 @@ Interested in Web Development, AI, and ML Engineering
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/library-management-system.git
+git clone https://github.com/MuhammadAbu-Bakr/Library-Management-System
 
 cd library-management-system
 
