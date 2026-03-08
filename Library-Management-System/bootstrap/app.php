@@ -17,4 +17,15 @@ return Application::configure(basePath: dirname(__DIR__))
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //
-    })->create();
+    })
+    ->booted(function () {
+        // Configure storage paths for Vercel serverless environment
+        if (isset($_ENV['VERCEL']) || isset($_ENV['NOW_REGION'])) {
+            config([
+                'view.compiled' => '/tmp/storage/framework/views',
+                'cache.stores.file.path' => '/tmp/storage/framework/cache',
+                'filesystems.disks.local.root' => '/tmp/storage/app',
+            ]);
+        }
+    })
+    ->create();

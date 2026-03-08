@@ -32,3 +32,5 @@ auth.json
 .zenflow
 .vscode
 .cursor
+
+VERCEL_QUICKSTART.md
